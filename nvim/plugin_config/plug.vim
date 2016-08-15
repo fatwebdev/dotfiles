@@ -2,40 +2,40 @@
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-	" NerdTree
-	Plug 'https://github.com/scrooloose/nerdtree.git'
+  " NerdTree
+  Plug 'https://github.com/scrooloose/nerdtree.git'
 
-	" wwdc16 Colorscheme
-	Plug 'lifepillar/vim-wwdc16-theme'
+  " wwdc16 Colorscheme
+  Plug 'lifepillar/vim-wwdc16-theme'
 
-	Plug 'editorconfig/editorconfig-vim'
+  Plug 'editorconfig/editorconfig-vim'
 
-	" Neomake
-	Plug 'neomake/neomake'
+  " Neomake
+  Plug 'neomake/neomake'
 
-	" Babel
-	Plug 'jbgutierrez/vim-babel'
-	Plug 'mattn/webapi-vim'
+  " Babel
+  Plug 'jbgutierrez/vim-babel'
+  Plug 'mattn/webapi-vim'
 
-	" JSX
-	Plug 'mxw/vim-jsx'
+  " JSX
+  Plug 'mxw/vim-jsx'
 
-	" JSON
-	Plug 'elzr/vim-json'
+  " JSON
+  Plug 'elzr/vim-json'
 
-	" JavaScript
-	Plug 'pangloss/vim-javascript'
+  " JavaScript
+  Plug 'pangloss/vim-javascript'
 
-	" Node
-	Plug 'moll/vim-node'
+  " Node
+  Plug 'moll/vim-node'
 
-	" Emmet
-	Plug 'mattn/emmet-vim'
+  " Emmet
+  Plug 'mattn/emmet-vim'
 
-	" Jade
-	Plug 'digitaltoad/vim-pug'
+  " Jade
+  Plug 'digitaltoad/vim-pug'
 
-	" Stylus
-	Plug 'wavded/vim-stylus'
+  " Stylus
+  Plug 'wavded/vim-stylus'
 
 call plug#end()

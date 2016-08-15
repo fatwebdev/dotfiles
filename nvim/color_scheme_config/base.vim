@@ -1,6 +1,7 @@
 set number
 set clipboard+=unnamedplus
 
+set expandtab
 set tabstop=2
 set shiftwidth=2
 
@@ -19,7 +20,7 @@ set linebreak
 
 " Show ↪ at the beginning of wrapped lines
 if has("linebreak")
-	let &sbr = nr2char(8618).' '
+  let &sbr = nr2char(8618).' '
 endif
 
 " Number of column to be highlighted
@@ -28,3 +29,5 @@ set colorcolumn=80
 
 " <Esc><Esc> Clear the search highlight in Normal mode
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>

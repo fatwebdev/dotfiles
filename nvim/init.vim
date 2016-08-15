@@ -1,29 +1,30 @@
 function! ColorschemeConfig(filename)
-	let l:filename = "color_scheme_config/" . a:filename . ".vim"
-	exec "runtime " . l:filename
+  let l:filename = "color_scheme_config/" . a:filename . ".vim"
+  exec "runtime " . l:filename
 endfunction
 
 function! PluginConfig(filename)
-	let l:filename = "plugin_config/" . a:filename . ".vim"
-	exec "runtime " . l:filename
+  let l:filename = "plugin_config/" . a:filename . ".vim"
+  exec "runtime " . l:filename
 endfunction
 
 function! LangConfig(filename)
-	let l:filename = "lang_config/" . a:filename . ".vim"
-	exec "runtime " . l:filename
+  let l:filename = "lang_config/" . a:filename . ".vim"
+  exec "runtime " . l:filename
 endfunction
 
 augroup vimrcEx
-	autocmd!
+  autocmd!
 
-	call ColorschemeConfig("base")
-	call ColorschemeConfig("status_line")
+  call ColorschemeConfig("base")
+  call ColorschemeConfig("status_line")
 
-	call PluginConfig("plug")
-	call PluginConfig("NERDTree")
-	call PluginConfig("neomake")
+  call PluginConfig("plug")
+  call PluginConfig("NERDTree")
+  call PluginConfig("neomake")
+  call PluginConfig("emmet")
 
-	call LangConfig("jsx")
+  call LangConfig("jsx")
 augroup END
 
 let mapleader=","
