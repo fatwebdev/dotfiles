@@ -13,6 +13,8 @@ function! LangConfig(filename)
   exec "runtime " . l:filename
 endfunction
 
+let mapleader=","
+
 augroup vimrcEx
   autocmd!
 
@@ -23,10 +25,10 @@ augroup vimrcEx
   call PluginConfig("NERDTree")
   call PluginConfig("neomake")
   call PluginConfig("emmet")
+  call PluginConfig("ctrlp")
 
   call LangConfig("jsx")
 augroup END
 
-let mapleader=","
 
 colorscheme wwdc16

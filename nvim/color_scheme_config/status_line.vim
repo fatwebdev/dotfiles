@@ -12,7 +12,7 @@ function! FileSize()
 endfunction
 
 function! CurDir()
-	return expand('%:p:~')
+  return expand('%:p:~')
 endfunction
 
 " Last window always has a status line

@@ -13,6 +13,9 @@ call plug#begin('~/.vim/plugged')
   " Neomake
   Plug 'neomake/neomake'
 
+  " Ctrl p
+  Plug 'ctrlpvim/ctrlp.vim'
+
   " Babel
   Plug 'jbgutierrez/vim-babel'
   Plug 'mattn/webapi-vim'
