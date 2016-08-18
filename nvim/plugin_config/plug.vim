@@ -16,6 +16,9 @@ call plug#begin('~/.vim/plugged')
   " Ctrl p
   Plug 'ctrlpvim/ctrlp.vim'
 
+  " Calc
+  Plug 'arecarn/crunch.vim'
+
   " Babel
   Plug 'jbgutierrez/vim-babel'
   Plug 'mattn/webapi-vim'

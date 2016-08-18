@@ -26,6 +26,7 @@ augroup vimrcEx
   call PluginConfig("neomake")
   call PluginConfig("emmet")
   call PluginConfig("ctrlp")
+  call PluginConfig("crunch")
 
   call LangConfig("jsx")
 augroup END
