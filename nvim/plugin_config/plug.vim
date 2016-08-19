@@ -22,6 +22,9 @@ call plug#begin('~/.vim/plugged')
   " Gitgutter
   Plug 'airblade/vim-gitgutter'
 
+  " Auto close brackets
+  Plug 'jiangmiao/auto-pairs'
+
   " Babel
   Plug 'jbgutierrez/vim-babel'
   Plug 'mattn/webapi-vim'
