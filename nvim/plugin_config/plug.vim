@@ -19,6 +19,9 @@ call plug#begin('~/.vim/plugged')
   " Calc
   Plug 'arecarn/crunch.vim'
 
+  " Gitgutter
+  Plug 'airblade/vim-gitgutter'
+
   " Babel
   Plug 'jbgutierrez/vim-babel'
   Plug 'mattn/webapi-vim'
@@ -40,6 +43,9 @@ call plug#begin('~/.vim/plugged')
 
   " Jade
   Plug 'digitaltoad/vim-pug'
+
+  " CSS
+  Plug 'lepture/vim-css'
 
   " Stylus
   Plug 'wavded/vim-stylus'
