@@ -25,6 +25,13 @@ call plug#begin('~/.vim/plugged')
   " Auto close brackets
   Plug 'jiangmiao/auto-pairs'
 
+  " Complete
+  Plug 'Shougo/deoplete.nvim'
+
+  " Snips
+  Plug 'sirver/ultisnips'
+  " Plug 'Shougo/neosnippet.vim'
+
   " Babel
   Plug 'jbgutierrez/vim-babel'
   Plug 'mattn/webapi-vim'

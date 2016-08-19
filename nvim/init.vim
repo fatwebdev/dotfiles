@@ -27,9 +27,9 @@ augroup vimrcEx
   call PluginConfig("emmet")
   call PluginConfig("ctrlp")
   call PluginConfig("crunch")
+  call PluginConfig("deoplete")
 
   call LangConfig("jsx")
 augroup END
-
 
 colorscheme wwdc16
