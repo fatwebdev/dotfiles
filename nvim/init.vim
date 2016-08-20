@@ -1,3 +1,6 @@
+set nocompatible
+set runtimepath+=~/dotfiles/nvim/
+
 function! ColorschemeConfig(filename)
   let l:filename = "color_scheme_config/" . a:filename . ".vim"
   exec "runtime " . l:filename
@@ -14,6 +17,8 @@ function! LangConfig(filename)
 endfunction
 
 let mapleader=","
+
+filetype off
 
 augroup vimrcEx
   autocmd!
@@ -33,3 +38,7 @@ augroup vimrcEx
 augroup END
 
 colorscheme wwdc16
+
+filetype plugin indent on
+
+let g:UltiSnipsUsePythonVersion = 3

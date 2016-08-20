@@ -31,6 +31,9 @@ call plug#begin('~/.vim/plugged')
   " Snips
   Plug 'sirver/ultisnips'
   " Plug 'Shougo/neosnippet.vim'
+  "
+  Plug 'honza/vim-snippets'
+  Plug 'ervandew/supertab'
 
   " Babel
   Plug 'jbgutierrez/vim-babel'

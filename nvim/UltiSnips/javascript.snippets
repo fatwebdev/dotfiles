@@ -1,9 +1,13 @@
-snippet fmatter
----
-title: ${1:Meet UltiSnips}
-date: ${2:`date +%Y-%m-%d`}
-tags: $3
----
-# $1
-$0
+snippet relefTest
+import React from 'react';
+import { shallow } from 'enzyme';
+import $1 from './$1.jsx';
+
+describe('@component $1', () => {
+  it('should render normal without any props supplied', () => {
+    expect(shallow(<$1/>)).to.have.length(1);
+  });
+  $0
+});
 endsnippet
+
