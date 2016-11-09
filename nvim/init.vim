@@ -55,10 +55,20 @@ set foldmethod=manual
 let g:UltiSnipsUsePythonVersion = 3
 
 " Set async completion.
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
+"let g:monster#completion#rcodetools#backend = "async_rct_complete"
 
 " With deoplete.nvim
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
+"let g:monster#completion#rcodetools#backend = "async_rct_complete"
+
+aug omnicomplete
+  au!
+  au FileType css,sass,scss,stylus,less setl omnifunc=csscomplete#CompleteCSS
+  au FileType html,htmldjango,jinja,markdown setl omnifunc=emmet#completeTag
+  au FileType javascript,jsx setl omnifunc=tern#Complete
+  au FileType python setl omnifunc=pythoncomplete#Complete
+  au FileType xml setl omnifunc=xmlcomplete#CompleteTags
+aug END
+
 let g:deoplete#sources#omni#input_patterns = {
 \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 \}
