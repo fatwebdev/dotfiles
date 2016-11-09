@@ -10,3 +10,14 @@ describe('@component $1', () => {
 });
 endsnippet
 
+snippet relefStory
+import React from 'react';
+import storiesOf from 'utils/storiesOf.js';
+import $1 from './$1.jsx';
+
+storiesOf('$1')
+  .addWithStore('demo', 'Default', () => (
+    <$1 />
+  ))$0
+;
+endsnippet
