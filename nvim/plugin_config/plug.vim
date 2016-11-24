@@ -78,6 +78,9 @@ call plug#begin('~/.vim/plugged')
   " Stylus
   Plug 'wavded/vim-stylus'
 
+  " SugarSS
+  Plug 'hhsnopek/vim-sugarss'
+
   " Elm
   Plug 'lambdatoast/elm.vim'
 

@@ -55,10 +55,10 @@ set foldmethod=manual
 let g:UltiSnipsUsePythonVersion = 3
 
 " Set async completion.
-"let g:monster#completion#rcodetools#backend = "async_rct_complete"
+" let g:monster#completion#rcodetools#backend = "async_rct_complete"
 
 " With deoplete.nvim
-"let g:monster#completion#rcodetools#backend = "async_rct_complete"
+" let g:monster#completion#rcodetools#backend = "async_rct_complete"
 
 aug omnicomplete
   au!
@@ -67,6 +67,9 @@ aug omnicomplete
   au FileType javascript,jsx setl omnifunc=tern#Complete
   au FileType python setl omnifunc=pythoncomplete#Complete
   au FileType xml setl omnifunc=xmlcomplete#CompleteTags
+  au FileType ruby,eruby setl omnifunc=rubycomplete#Complete
+  au FileType ruby let g:rubycomplete_buffer_loading=1
+  au FileType ruby let g:rubycomplete_classes_in_global=1
 aug END
 
 let g:deoplete#sources#omni#input_patterns = {
@@ -75,3 +78,5 @@ let g:deoplete#sources#omni#input_patterns = {
 
 let g:tslime_always_current_session = 1
 let g:tslime_always_current_window = 1
+
+autocmd BufEnter * silent! lcd %:p:h
