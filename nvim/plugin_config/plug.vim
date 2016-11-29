@@ -40,6 +40,9 @@ call plug#begin('~/.vim/plugged')
   " Plug 'honza/vim-snippets'
   Plug 'ervandew/supertab'
 
+  " Search
+  Plug 'mileszs/ack.vim'
+
   " Ruby
   Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-endwise'
