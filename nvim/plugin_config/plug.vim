@@ -22,8 +22,9 @@ call plug#begin('~/.vim/plugged')
   " Calc
   Plug 'arecarn/crunch.vim'
 
-  " Gitgutter
+  " Git
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
 
   " Auto close brackets
   Plug 'jiangmiao/auto-pairs'
@@ -86,5 +87,8 @@ call plug#begin('~/.vim/plugged')
 
   " Elm
   Plug 'lambdatoast/elm.vim'
+
+  " PHP
+  Plug 'StanAngeloff/php.vim'
 
 call plug#end()
