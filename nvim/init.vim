@@ -60,6 +60,18 @@ set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
 set expandtab
 set tabstop=2
 set shiftwidth=2
+" Set column size
+set colorcolumn=80
+" Wrap long lines
+set wrap
+" Don't break words when wrapping
+" Only available when compiled with the +linebreak feature
+set linebreak
+" Show ↪ at the beginning of wrapped lines
+if has("linebreak")
+  let &sbr = nr2char(8618).' '
+endif
+
 
 " NERDTree
 nnoremap <Bs> :<C-u>NERDTreeToggle<CR>
@@ -87,3 +99,12 @@ nnoremap <Leader>p :CtrlP<CR>
 
 " Flow
 let g:flow#autoclose = 1
+
+" JSX
+let g:jsx_ext_required = 0
+
+" rus to eng
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+
+" <Esc><Esc> Clear the search highlight in Normal mode
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
