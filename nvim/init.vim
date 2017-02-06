@@ -19,6 +19,24 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'neomake/neomake'
 
+Plug 'othree/html5.vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'slim-template/vim-slim'
+
+Plug 'lepture/vim-css'
+Plug 'wavded/vim-stylus'
+Plug 'hhsnopek/vim-sugarss'
+
+Plug 'moll/vim-node'
+Plug 'kchmck/vim-coffee-script'
+Plug 'pangloss/vim-javascript'
+Plug 'facebook/vim-flow'
+Plug 'mxw/vim-jsx'
+Plug 'jbgutierrez/vim-babel'
+Plug 'mattn/webapi-vim'
+
+Plug 'elzr/vim-json'
+
 " Initialize plugin system
 call plug#end()
 
@@ -66,3 +84,6 @@ autocmd! BufWritePost,BufEnter * Neomake
 " Ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 nnoremap <Leader>p :CtrlP<CR>
+
+" Flow
+let g:flow#autoclose = 1
