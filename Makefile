@@ -7,3 +7,6 @@ nvim_install:
 nvim_python:
 	pip2 install --upgrade neovim
 	pip3 install --upgrade neovim
+nvim_plug:
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
