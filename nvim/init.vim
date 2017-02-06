@@ -9,6 +9,8 @@ Plug 'arakashic/nvim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " Initialize plugin system
 call plug#end()
 
@@ -43,3 +45,6 @@ let NERDTreeMinimalUI=1
 " Use arrows instead of + ~ chars when displaying directories
 let NERDTreeDirArrows=1
 let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
+
+" Deoplete.
+let g:deoplete#enable_at_startup = 1
