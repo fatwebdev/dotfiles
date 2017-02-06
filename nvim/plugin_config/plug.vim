@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 
   " Neomake
   Plug 'neomake/neomake'
+  Plug 'jaawerth/nrun.vim'
 
   " Ctrl p
   Plug 'ctrlpvim/ctrlp.vim'
@@ -52,6 +53,20 @@ call plug#begin('~/.vim/plugged')
   Plug 'jbgutierrez/vim-babel'
   Plug 'mattn/webapi-vim'
 
+  " Clojure
+  Plug 'guns/vim-clojure-highlight'
+  Plug 'guns/vim-clojure-static'
+  Plug 'guns/vim-slamhound'
+  Plug 'tpope/vim-classpath'
+  Plug 'tpope/vim-fireplace'
+  Plug 'tpope/vim-salve'
+  Plug 'venantius/vim-eastwood'
+  Plug 'venantius/vim-cljfmt'
+  Plug 'vim-scripts/paredit.vim'
+
+  " Haskell
+  Plug 'neovimhaskell/haskell-vim'
+
   " JSX
   Plug 'mxw/vim-jsx'
 
@@ -60,6 +75,10 @@ call plug#begin('~/.vim/plugged')
 
   " JavaScript
   Plug 'pangloss/vim-javascript'
+  Plug 'facebook/vim-flow'
+
+  " CoffeScript
+  Plug 'kchmck/vim-coffee-script'
 
   " Node
   Plug 'moll/vim-node'
