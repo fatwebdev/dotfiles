@@ -5,6 +5,7 @@ set clipboard+=unnamedplus
 call plug#begin('~/.vim/plugged')
 
 Plug 'arakashic/nvim-colors-solarized'
+Plug 'vim-airline/vim-airline'
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
