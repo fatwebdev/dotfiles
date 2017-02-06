@@ -23,7 +23,8 @@ Plug 'othree/html5.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'slim-template/vim-slim'
 
-Plug 'lepture/vim-css'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'ap/vim-css-color'
 Plug 'wavded/vim-stylus'
 Plug 'hhsnopek/vim-sugarss'
 
