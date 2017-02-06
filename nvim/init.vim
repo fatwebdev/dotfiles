@@ -15,6 +15,8 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+Plug 'neomake/neomake'
+
 " Initialize plugin system
 call plug#end()
 
@@ -52,3 +54,6 @@ let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
 
 " Deoplete.
 let g:deoplete#enable_at_startup = 1
+
+" Neomake
+autocmd! BufWritePost,BufEnter * Neomake
