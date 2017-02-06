@@ -9,6 +9,7 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -19,6 +20,9 @@ Plug 'neomake/neomake'
 
 " Initialize plugin system
 call plug#end()
+
+" Leader key
+let mapleader=","
 
 " Theme
 set termguicolors
@@ -57,3 +61,7 @@ let g:deoplete#enable_at_startup = 1
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
+
+" Ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+nnoremap <Leader>p :CtrlP<CR>
