@@ -16,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neopairs.vim'
 
 Plug 'neomake/neomake'
 
@@ -37,6 +38,13 @@ Plug 'jbgutierrez/vim-babel'
 Plug 'mattn/webapi-vim'
 
 Plug 'elzr/vim-json'
+
+Plug 'bhurlow/vim-parinfer'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-salve'
+Plug 'vim-scripts/paredit.vim'
+Plug 'kovisoft/slimv'
+Plug 'guns/vim-clojure-static'
 
 " Initialize plugin system
 call plug#end()
