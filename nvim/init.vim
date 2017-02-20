@@ -118,7 +118,8 @@ let mapleader = "\<Space>"
 
 " Ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-nnoremap <Leader>p :CtrlP<CR>
+nnoremap <Leader>pf :CtrlP<CR>
+nnoremap <Leader>bf :CtrlPBuffer<CR>
 
 " Git
 nnoremap <Leader>gb :Gblame<CR>
