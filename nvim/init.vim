@@ -1,82 +1,128 @@
-set nocompatible
-set runtimepath+=~/dotfiles/nvim/
-set hidden
-" Backup и swp files
-  " Don't create backups
-  set nobackup
-  " Don't create swap files
-  set noswapfile
+set number
+set clipboard+=unnamedplus
 
-function! ColorschemeConfig(filename)
-  let l:filename = "color_scheme_config/" . a:filename . ".vim"
-  exec "runtime " . l:filename
-endfunction
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.vim/plugged')
 
-function! PluginConfig(filename)
-  let l:filename = "plugin_config/" . a:filename . ".vim"
-  exec "runtime " . l:filename
-endfunction
+Plug 'arakashic/nvim-colors-solarized'
+Plug 'vim-airline/vim-airline'
 
-function! LangConfig(filename)
-  let l:filename = "lang_config/" . a:filename . ".vim"
-  exec "runtime " . l:filename
-endfunction
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neopairs.vim'
+
+Plug 'neomake/neomake'
+
+Plug 'othree/html5.vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'slim-template/vim-slim'
+
+Plug 'hail2u/vim-css3-syntax'
+Plug 'ap/vim-css-color'
+Plug 'wavded/vim-stylus'
+Plug 'hhsnopek/vim-sugarss'
+
+Plug 'moll/vim-node'
+Plug 'kchmck/vim-coffee-script'
+Plug 'pangloss/vim-javascript'
+Plug 'facebook/vim-flow'
+Plug 'mxw/vim-jsx'
+Plug 'jbgutierrez/vim-babel'
+Plug 'mattn/webapi-vim'
+
+Plug 'elzr/vim-json'
+
+Plug 'bhurlow/vim-parinfer'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-salve'
+Plug 'vim-scripts/paredit.vim'
+Plug 'kovisoft/slimv'
+Plug 'guns/vim-clojure-static'
+
+" Initialize plugin system
+call plug#end()
+
+" Leader key
 let mapleader=","
 
-filetype off
-
-augroup vimrcEx
-  autocmd!
-
-  call ColorschemeConfig("base")
-  call ColorschemeConfig("status_line")
-
-  call PluginConfig("plug")
-  call PluginConfig("NERDTree")
-  call PluginConfig("neomake")
-  call PluginConfig("emmet")
-  call PluginConfig("ctrlp")
-  call PluginConfig("crunch")
-  call PluginConfig("deoplete")
-
-  call LangConfig("jsx")
-augroup END
-
-" colorscheme wwdc16
-syntax enable
+" Theme
+set termguicolors
+set t_Co=256
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
+" set background=light
 colorscheme solarized
 
-filetype plugin indent on
+syntax enable
 
-set foldmethod=manual
+" Show whitespace
+set list
+set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
+" Set tabsize
+set expandtab
+set tabstop=2
+set shiftwidth=2
+" Set column size
+set colorcolumn=80
+" Wrap long lines
+set wrap
+" Don't break words when wrapping
+" Only available when compiled with the +linebreak feature
+set linebreak
+" Show ↪ at the beginning of wrapped lines
+if has("linebreak")
+  let &sbr = nr2char(8618).' '
+endif
 
-let g:UltiSnipsUsePythonVersion = 3
 
-" Set async completion.
-" let g:monster#completion#rcodetools#backend = "async_rct_complete"
+" NERDTree
+nnoremap <Bs> :<C-u>NERDTreeToggle<CR>
 
-" With deoplete.nvim
-" let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
+let NERDTreeKeepTreeInNewTab=0
+" Disable display of the 'Bookmarks' label and 'Press ? for help' text
+let NERDTreeMinimalUI=1
+" Use arrows instead of + ~ chars when displaying directories
+let NERDTreeDirArrows=1
+let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
 
-aug omnicomplete
-  au!
-  au FileType css,sass,scss,stylus,less setl omnifunc=csscomplete#CompleteCSS
-  au FileType html,htmldjango,jinja,markdown setl omnifunc=emmet#completeTag
-  au FileType javascript,jsx setl omnifunc=tern#Complete
-  au FileType python setl omnifunc=pythoncomplete#Complete
-  au FileType xml setl omnifunc=xmlcomplete#CompleteTags
-  au FileType ruby,eruby setl omnifunc=rubycomplete#Complete
-  au FileType ruby let g:rubycomplete_buffer_loading=1
-  au FileType ruby let g:rubycomplete_classes_in_global=1
-aug END
+" Deoplete.
+let g:deoplete#enable_at_startup = 1
 
-let g:deoplete#sources#omni#input_patterns = {
-\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-\}
+" Neomake
+autocmd! BufWritePost,BufEnter * Neomake
 
-let g:tslime_always_current_session = 1
-let g:tslime_always_current_window = 1
+" Flow
+let g:flow#autoclose = 1
 
-autocmd BufEnter * silent! lcd %:p:h
+" JSX
+let g:jsx_ext_required = 0
+
+" rus to eng
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+
+" <Esc><Esc> Clear the search highlight in Normal mode
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+
+let mapleader = "\<Space>"
+
+" Ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+nnoremap <Leader>p :CtrlP<CR>
+
+" Git
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+
+" Clojure
+autocmd! FileType clojure nnoremap <buffer> <Leader>r :Eval<CR>
