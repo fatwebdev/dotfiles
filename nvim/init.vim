@@ -102,10 +102,6 @@ let g:deoplete#enable_at_startup = 1
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
 
-" Ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-nnoremap <Leader>p :CtrlP<CR>
-
 " Flow
 let g:flow#autoclose = 1
 
@@ -117,3 +113,16 @@ set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁ
 
 " <Esc><Esc> Clear the search highlight in Normal mode
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+
+let mapleader = "\<Space>"
+
+" Ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+nnoremap <Leader>p :CtrlP<CR>
+
+" Git
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+
+" Clojure
+autocmd! FileType clojure nnoremap <buffer> <Leader>r :Eval<CR>
