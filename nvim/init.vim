@@ -20,6 +20,8 @@ Plug 'Shougo/neopairs.vim'
 
 Plug 'neomake/neomake'
 
+Plug 'mileszs/ack.vim'
+
 Plug 'othree/html5.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'slim-template/vim-slim'
@@ -120,6 +122,9 @@ let mapleader = "\<Space>"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 nnoremap <Leader>pf :CtrlP<CR>
 nnoremap <Leader>bf :CtrlPBuffer<CR>
+
+" Ack
+nnoremap <Leader>sa :Ack 
 
 " Git
 nnoremap <Leader>gb :Gblame<CR>
