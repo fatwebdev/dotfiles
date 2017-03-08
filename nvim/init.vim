@@ -124,7 +124,7 @@ nnoremap <Leader>pf :CtrlP<CR>
 nnoremap <Leader>bf :CtrlPBuffer<CR>
 
 " Ack
-nnoremap <Leader>sa :Ack 
+nnoremap <Leader>sa :Ack
 
 " Git
 nnoremap <Leader>gb :Gblame<CR>
