@@ -22,6 +22,7 @@ Plug 'neomake/neomake'
 
 Plug 'mileszs/ack.vim'
 
+Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'slim-template/vim-slim'
@@ -41,12 +42,12 @@ Plug 'mattn/webapi-vim'
 
 Plug 'elzr/vim-json'
 
-Plug 'bhurlow/vim-parinfer'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-salve'
-Plug 'vim-scripts/paredit.vim'
-Plug 'kovisoft/slimv'
-Plug 'guns/vim-clojure-static'
+"Plug 'bhurlow/vim-parinfer'
+"Plug 'tpope/vim-fireplace'
+"Plug 'tpope/vim-salve'
+"Plug 'vim-scripts/paredit.vim'
+"Plug 'kovisoft/slimv'
+"Plug 'guns/vim-clojure-static'
 
 " Initialize plugin system
 call plug#end()
@@ -58,8 +59,8 @@ let mapleader=","
 set termguicolors
 set t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark
-" set background=light
+" set background=dark
+ set background=light
 colorscheme solarized
 
 syntax enable
